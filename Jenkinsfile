@@ -6,6 +6,12 @@ pipeline {
 
   stages {
 
+    stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/abhaypawa/jenkins_project.git'
+            }
+        }
+
     stage('Install Dependencies') {
 
       steps {
